@@ -12,7 +12,7 @@
 
 spawn scp -r smoke-test ubuntu@172.28.10.234:.
 
-expect "(yes/no)?"
+expect "Are you sure you want to continue connecting (yes/no)?"
 send "yes\n"
 
 expect "password:"
