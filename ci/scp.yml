@@ -3,7 +3,8 @@ platform: linux
 
 image_resource:
   type: docker-image
-  source: {repository: ubuntu}
+  source:
+    repository: wrast/ubuntu-expect
 
 inputs:
   - name: smoke-test
