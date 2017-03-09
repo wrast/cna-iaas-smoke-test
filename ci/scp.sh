@@ -11,6 +11,11 @@
 #interact
 
 spawn scp -r smoke-test ubuntu@172.28.10.234:.
+
+expect "(yes/no)?"
+send "yes\n"
+
 expect "password:"
 send "welcome1\n"
+
 interact
