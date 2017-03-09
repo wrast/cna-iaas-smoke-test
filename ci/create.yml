@@ -13,4 +13,4 @@ outputs:
   - name: smoke-test
 
 run:
-  path: iaas-smoke-test/ci/copy_files.sh
+  path: cna-iaas-smoke-test/ci/copy_files.sh

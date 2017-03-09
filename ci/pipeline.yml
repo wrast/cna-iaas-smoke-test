@@ -6,7 +6,7 @@ jobs:
   - get: iaas-smoke-test-release
   - get: cna-iaas-smoke-test
   - task: create
-    file: iaas-smoke-test/ci/create.yml
+    file: cna-iaas-smoke-test/ci/create.yml
 resources:
 - name: iaas-smoke-test-release
   type: github-release
@@ -14,7 +14,6 @@ resources:
     user: ECSTeam
     repository: IaaSSmokeTest
 - name: cna-iaas-smoke-test
-  type: github
+  type: git
   source:
-    user: wrast
-    repository: cna-iaas-smoke-test
+    uri: https://github.com/wrast/cna-iaas-smoke-test.git
