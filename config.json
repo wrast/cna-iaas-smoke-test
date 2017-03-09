@@ -1,0 +1,17 @@
+{
+		"remoteHost":"localhost",
+		"remoteConnectionDetails": [
+			{
+				"port":"80",
+				"protocol":"tcp",
+				"description":"test"
+			},
+		],
+		"localConnectionDetails": [
+			{
+				"port":"80",
+				"protocol":"tcp",
+				"description":"test"
+			},
+		]
+}
