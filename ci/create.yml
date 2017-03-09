@@ -6,11 +6,7 @@ image_resource:
   source: {repository: busybox}
 
 inputs:
-  - name: iaas-smoke-test-release
-  - name: cna-iaas-smoke-test
-
-outputs:
   - name: smoke-test
 
 run:
-  path: cna-iaas-smoke-test/ci/create.sh
+  path: cna-iaas-smoke-test/ci/scp.sh

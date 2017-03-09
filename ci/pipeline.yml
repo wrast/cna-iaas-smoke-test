@@ -7,6 +7,8 @@ jobs:
   - get: cna-iaas-smoke-test
   - task: create
     file: cna-iaas-smoke-test/ci/create.yml
+  - task: scp
+    file: cna-iaas-smoke-test/ci/scp.yml
 resources:
 - name: iaas-smoke-test-release
   type: github-release
