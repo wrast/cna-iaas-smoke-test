@@ -1,0 +1,16 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: busybox}
+
+inputs:
+  - name: iaas-smoke-test-release
+  - name: cna-iaas-smoke-test
+
+outputs:
+  - name: smoke-test
+
+run:
+  path: iaas-smoke-test/ci/copy_files.sh

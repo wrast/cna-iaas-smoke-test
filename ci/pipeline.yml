@@ -1,0 +1,20 @@
+jobs:
+- name: job-github-release
+  public: true
+  serial: true
+  plan:
+  - get: iaas-smoke-test-release
+  - get: cna-iaas-smoke-test
+  - task: create
+    file: iaas-smoke-test/ci/create.yml
+resources:
+- name: iaas-smoke-test-release
+  type: github-release
+  source:
+    user: ECSTeam
+    repository: IaaSSmokeTest
+- name: cna-iaas-smoke-test
+  type: github
+  source:
+    user: wrast
+    repository: cna-iaas-smoke-test
