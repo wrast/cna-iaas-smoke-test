@@ -18,4 +18,4 @@ inputs:
 
 run:
   path: cna-iaas-smoke-test/ci/scp.sh
-  args: [{{host_name}}, {{host_user}}, {{host_password}}, {{host_path}}]
+  args: [$host_name, {{host_user}}, {{host_password}}, {{host_path}}]
