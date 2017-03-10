@@ -9,6 +9,11 @@ jobs:
     file: cna-iaas-smoke-test/ci/create.yml
   - task: scp
     file: cna-iaas-smoke-test/ci/scp.yml
+    params:
+      HOST_NAME: {{ host1.name }}
+      HOST_USER: {{ host1.user }}
+      HOST_PASSWORD: {{ host1.password }}
+      HOST_PATH: {{ host1.path }}
 resources:
 - name: iaas-smoke-test-release
   type: github-release
