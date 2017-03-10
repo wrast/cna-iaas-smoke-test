@@ -7,10 +7,10 @@ image_resource:
     repository: wrast/ubuntu-expect
 
 params:
-  host-name:
-  host-user:
-  host-password:
-  host-path:
+  host-name: {{host_name}}
+  host_user:
+  host_password:
+  host_path:
 
 inputs:
   - name: cna-iaas-smoke-test
@@ -18,4 +18,4 @@ inputs:
 
 run:
   path: cna-iaas-smoke-test/ci/scp.sh
-  args: [{{host-name}}, {{host-user}}, {{host-password}}, {{host-path}}]
+  args: [{{host_name}}, {{host_user}}, {{host_password}}, {{host_path}}]
