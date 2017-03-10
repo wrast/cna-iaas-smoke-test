@@ -7,7 +7,7 @@ image_resource:
     repository: wrast/ubuntu-expect
 
 params:
-  host-name: {{host_name}}
+  host_name: host_name_unknown
   host_user:
   host_password:
   host_path:
