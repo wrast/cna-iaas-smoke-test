@@ -11,16 +11,16 @@
 #interact
 
 set host $env(host_name)
-# set user [lindex $argv 1]
-# set password [lindex $argv 2]
-# set remotePath [lindex $argv 3]
+set user $env(host_user)
+set password $env(host_password)
+set remotePath $env(host_path)
 
-spawn scp -r smoke-test $env(host_user)@$host:$env(host_path)
+spawn scp -r smoke-test $user@$host:$remotePath
 
 expect "Are you sure you want to continue connecting (yes/no)?"
 send "yes\n"
 
 expect "password:"
-send "$env(host_password)\n"
+send "$password\n"
 
 interact
