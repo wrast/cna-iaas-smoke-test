@@ -17,5 +17,6 @@ params:
   host_path: host_path_unknown
 
 run:
-  path: cna-iaas-smoke-test/ci/scp.sh
-  args: [{{host_name}}, $host_user, $host_password, $host_path]
+  # path: cna-iaas-smoke-test/ci/scp.sh
+  path: env
+  # args: [$host_name, $host_user, $host_password, $host_path]
