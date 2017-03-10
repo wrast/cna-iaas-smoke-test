@@ -10,12 +10,17 @@
 #send "$SMOKETEST_PASSWORD\n"
 #interact
 
-spawn scp -r smoke-test ubuntu@172.28.10.234:.
+set host [lindex $argv 0]
+set user [lindex $argv 1]
+set password [lindex $argv 2]
+set remotePath [lindex $argv 3]
+
+spawn scp -r smoke-test $user@$host:$remotePath
 
 expect "Are you sure you want to continue connecting (yes/no)?"
 send "yes\n"
 
 expect "password:"
-send "welcome1\n"
+send "$password\n"
 
 interact
