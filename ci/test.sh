@@ -14,10 +14,12 @@ expect "password:"
 send "$password\n"
 
 expect "$"
-send "cd $remotePath/smoke-test"
+send "cd $remotePath/smoke-test\n"
 
 expect "smoke-test$"
 send "ls -l\n"
-exit
+
+expect "smoke-test$"
+send "exit\n"
 
 interact
