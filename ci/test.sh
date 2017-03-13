@@ -20,6 +20,6 @@ expect "smoke-test$"
 send "ls -l\n"
 
 expect "smoke-test$"
-send "exit\n"
+set ::env(IAASTESTCONFIGDIR) $remotePath/smoke-test
 
 interact
