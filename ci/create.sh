@@ -6,4 +6,4 @@
 #ls -lR cna-iaas-smoke-test
 cp -r iaas-smoke-test-release/IaaSSmokeTest_linux smoke-test/.
 cp cna-iaas-smoke-test/config_$host_name.json smoke-test/config.json
-ls -lR smoke-test
+#ls -lR smoke-test

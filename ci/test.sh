@@ -13,9 +13,8 @@ spawn ssh $user@$host
 expect "password:"
 send "$password\n"
 
-cd smoke-test
+cd $remotePath
 send "ls -l\n"
-puts "\nReady to run"
 exit
 
 interact
