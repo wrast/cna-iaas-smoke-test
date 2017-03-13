@@ -14,7 +14,7 @@ expect "password:"
 send "$password\n"
 
 cd smoke-test
-echo "Ready to run"
+puts "Ready to run"
 exit
 
 interact
