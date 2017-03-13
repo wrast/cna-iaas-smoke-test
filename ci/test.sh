@@ -13,7 +13,10 @@ spawn ssh $user@$host
 expect "password:"
 send "$password\n"
 
-cd $remotePath
+expect "$"
+send "cd $remotePath/smoke-test"
+
+expect "smoke-test$"
 send "ls -l\n"
 exit
 
