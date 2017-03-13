@@ -1,0 +1,17 @@
+{
+		"remoteHost":"172.28.10.234",
+		"remoteConnectionDetails": [
+			{
+				"port":"12345",
+				"protocol":"tcp",
+				"description":"test"
+			},
+		],
+		"localConnectionDetails": [
+			{
+				"port":"12345",
+				"protocol":"tcp",
+				"description":"test"
+			},
+		]
+}

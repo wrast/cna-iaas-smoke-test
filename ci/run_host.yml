@@ -1,0 +1,21 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: wrast/ubuntu-expect
+
+inputs:
+  - name: iaas-smoke-test-release
+  - name: cna-iaas-smoke-test
+
+# provided by pipeline.yml
+params:
+  host_name: host_name_unknown
+  host_user: host_user_unknown
+  host_password: host_password_unknown
+  host_path: host_path_unknown
+
+run:
+  path: cna-iaas-smoke-test/ci/create.sh;cna-iaas-smoke-test/ci/scp.sh

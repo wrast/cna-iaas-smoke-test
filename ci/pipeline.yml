@@ -6,18 +6,16 @@ jobs:
   - aggregate:
     - get: iaas-smoke-test-release
     - get: cna-iaas-smoke-test
-  - task: create
-    file: cna-iaas-smoke-test/ci/create.yml
   - aggregate:
-    - task: scp
-      file: cna-iaas-smoke-test/ci/scp.yml
+    - task: run_host1
+      file: cna-iaas-smoke-test/ci/run_host.yml
       params:
         host_name: {{host1_name}}
         host_user: {{host1_user}}
         host_password: {{host1_password}}
         host_path: {{host1_path}}
-    - task: scp
-      file: cna-iaas-smoke-test/ci/scp.yml
+    - task: run_host2
+      file: cna-iaas-smoke-test/ci/run_host.yml
       params:
         host_name: {{host2_name}}
         host_user: {{host2_user}}
