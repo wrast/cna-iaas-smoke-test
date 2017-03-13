@@ -10,6 +10,9 @@ inputs:
   - name: iaas-smoke-test-release
   - name: cna-iaas-smoke-test
 
+outputs:
+  - name: smoke-test
+  
 # provided by pipeline.yml
 params:
   host_name: host_name_unknown
