@@ -10,6 +10,7 @@ inputs:
   - name: cna-iaas-smoke-test
   - name: smoke-test
 
+# provided by pipeline.yml
 params:
   host_name: host_name_unknown
   host_user: host_user_unknown
@@ -18,4 +19,3 @@ params:
 
 run:
   path: cna-iaas-smoke-test/ci/scp.sh
-  

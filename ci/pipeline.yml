@@ -3,17 +3,26 @@ jobs:
   public: true
   serial: true
   plan:
-  - get: iaas-smoke-test-release
-  - get: cna-iaas-smoke-test
+  - aggregate:
+    - get: iaas-smoke-test-release
+    - get: cna-iaas-smoke-test
   - task: create
     file: cna-iaas-smoke-test/ci/create.yml
-  - task: scp
-    file: cna-iaas-smoke-test/ci/scp.yml
-    params:
-      host_name: {{host1_name}}
-      host_user: {{host1_user}}
-      host_password: {{host1_password}}
-      host_path: {{host1_path}}
+  - aggregate:
+    - task: scp
+      file: cna-iaas-smoke-test/ci/scp.yml
+      params:
+        host_name: {{host1_name}}
+        host_user: {{host1_user}}
+        host_password: {{host1_password}}
+        host_path: {{host1_path}}
+    - task: scp
+      file: cna-iaas-smoke-test/ci/scp.yml
+      params:
+        host_name: {{host2_name}}
+        host_user: {{host2_user}}
+        host_password: {{host2_password}}
+        host_path: {{host2_path}}
 resources:
 - name: iaas-smoke-test-release
   type: github-release
