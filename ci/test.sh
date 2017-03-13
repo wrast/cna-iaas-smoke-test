@@ -14,8 +14,8 @@ expect "password:"
 send "$password\n"
 
 cd smoke-test
-ls -l
-puts "Ready to run"
+send "ls -l\n"
+puts "\nReady to run"
 exit
 
 interact
