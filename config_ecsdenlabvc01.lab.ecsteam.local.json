@@ -2,14 +2,14 @@
 		"remoteHost":"172.29.0.18",
 		"remoteConnectionDetails": [
 			{
-				"port":"80",
+				"port":"8888",
 				"protocol":"tcp",
 				"description":"test"
 			}
 		],
 		"localConnectionDetails": [
 			{
-				"port":"80",
+				"port":"8888",
 				"protocol":"tcp",
 				"description":"test"
 			}
