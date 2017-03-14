@@ -31,8 +31,6 @@ send "\n"
 expect "Hit Enter to shutdown listeners:"
 send "\n"
 
-
-
-#send "exit\n"
+send "exit\n"
 
 interact

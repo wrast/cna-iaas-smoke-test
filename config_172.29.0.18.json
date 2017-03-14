@@ -1,15 +1,15 @@
 {
-		"remoteHost":"172.28.41.5",
+		"remoteHost":"ecsdenlabvc01.lab.ecsteam.local",
 		"remoteConnectionDetails": [
 			{
-				"port":"12345",
+				"port":"80",
 				"protocol":"tcp",
 				"description":"test"
 			}
 		],
 		"localConnectionDetails": [
 			{
-				"port":"12345",
+				"port":"80",
 				"protocol":"tcp",
 				"description":"test"
 			}
