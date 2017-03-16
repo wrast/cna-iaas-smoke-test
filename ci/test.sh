@@ -48,7 +48,8 @@ send "\r"
 
 expect {
   "Hit Enter to shutdown listeners:" {
-    sleep 2 # this gives other host a chance to send before we shut down
+    # sleep gives other host a chance to send before we shut down
+    sleep 2
     send "\r"
     exp_continue
   }
