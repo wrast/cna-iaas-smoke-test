@@ -4,11 +4,11 @@ set host $env(host_name)
 set user $env(host_user)
 set password $env(host_password)
 set remotePath $env(host_path)
-#set prompt $env(host_prompt)
 set platform $env(host_platform)
 
 set timeout 5
 
+# this regex should cover most prompts
 set multiprompt "(%|#|\\$) $"
 
 spawn ssh $user@$host
