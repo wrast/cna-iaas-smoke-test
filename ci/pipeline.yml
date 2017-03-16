@@ -31,7 +31,6 @@ jobs:
         host_user: {{host1_user}}
         host_password: {{host1_password}}
         host_path: {{host1_path}}
-        host_prompt: {{host1_prompt}}
         host_platform: {{host1_platform}}
     - task: run_test2
       file: cna-iaas-smoke-test/ci/run_test.yml
@@ -40,7 +39,6 @@ jobs:
         host_user: {{host2_user}}
         host_password: {{host2_password}}
         host_path: {{host2_path}}
-        host_prompt: {{host2_prompt}}
         host_platform: {{host2_platform}}
 resources:
 - name: iaas-smoke-test-release

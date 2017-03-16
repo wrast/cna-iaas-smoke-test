@@ -4,34 +4,57 @@ set host $env(host_name)
 set user $env(host_user)
 set password $env(host_password)
 set remotePath $env(host_path)
-set prompt $env(host_prompt)
+#set prompt $env(host_prompt)
 set platform $env(host_platform)
+
+set timeout 5
+
+set multiprompt "(%|#|\\$) $"
 
 spawn ssh $user@$host
 
-expect "Are you sure you want to continue connecting (yes/no)?"
-send "yes\n"
+expect {
+  "yes/no" {
+    send "yes\r"
+    exp_continue
+  }
 
-expect "password:"
-send "$password\n"
+  "assword:" {
+    send "$password\r"
+    exp_continue
+  }
 
-expect "$prompt"
+  timeout {
+    puts "Connection to $host timed out"
+    exit 1
+  }
+
+  -re "failed|invalid password|denied" {
+    puts "Invalid credentials for user $user"
+    exit 1
+  }
+
+  -re $multiprompt
+}
+
 send "cd $remotePath/smoke-test\n"
-
-#expect "smoke-test$ "
 send "export IAASTESTCONFIGDIR=./\n"
 send "chmod +x ./IaaSSmokeTest_$platform\n"
 send "./IaaSSmokeTest_$platform\n"
 
-# this expect will just timeout after 10 sec - fake "sleep" waiting for ports to open
-# default expect timeout is 10 sec. use "set timeout X" to change default.
-expect "fake sleep"
+# wait a couple seconds before telling program to continue
+sleep 2
 send "\n"
 
-expect "Hit Enter to shutdown listeners:"
-send "\n"
+expect {
+  "Hit Enter to shutdown listeners:" {
+    send "\n"
+    exp_continue
+  }
 
-expect "$prompt"
-send "exit\n"
+  -re $multiprompt {
+    send "exit\n"
+  }
+}
 
-interact
+#interact
