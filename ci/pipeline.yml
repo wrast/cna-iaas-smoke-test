@@ -14,10 +14,27 @@ jobs:
         host_user: {{host1_user}}
         host_password: {{host1_password}}
         host_path: {{host1_path}}
-        host_prompt: {{host1_prompt}}
         host_platform: {{host1_platform}}
     - task: run_host2
       file: cna-iaas-smoke-test/ci/run_host.yml
+      params:
+        host_name: {{host2_name}}
+        host_user: {{host2_user}}
+        host_password: {{host2_password}}
+        host_path: {{host2_path}}
+        host_platform: {{host2_platform}}
+  - aggregate:
+    - task: run_test1
+      file: cna-iaas-smoke-test/ci/run_test.yml
+      params:
+        host_name: {{host1_name}}
+        host_user: {{host1_user}}
+        host_password: {{host1_password}}
+        host_path: {{host1_path}}
+        host_prompt: {{host1_prompt}}
+        host_platform: {{host1_platform}}
+    - task: run_test2
+      file: cna-iaas-smoke-test/ci/run_test.yml
       params:
         host_name: {{host2_name}}
         host_user: {{host2_user}}

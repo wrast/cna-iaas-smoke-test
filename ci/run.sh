@@ -16,6 +16,6 @@ realpath() {
 pushd $DIR
   fly sp -t ${fly_target} configure -c pipeline.yml -l hosts.yml -p main -n
   fly -t ${fly_target} unpause-pipeline --pipeline main
-  fly -t ${fly_target} trigger-job -j main/job-github-release
-  fly -t ${fly_target} watch -j main/job-github-release
+  fly -t ${fly_target} trigger-job -j main/iaas-smoke-test
+  fly -t ${fly_target} watch -j main/iaas-smoke-test
 popd
