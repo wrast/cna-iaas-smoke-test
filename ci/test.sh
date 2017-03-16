@@ -43,7 +43,7 @@ send "chmod +x ./IaaSSmokeTest_$platform\n"
 send "./IaaSSmokeTest_$platform\n"
 
 # wait a couple seconds before telling program to continue
-sleep 2
+sleep 5
 send "\n"
 
 expect {
