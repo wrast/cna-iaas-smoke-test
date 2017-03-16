@@ -1,5 +1,5 @@
 jobs:
-- name: job-github-release
+- name: iaas-smoke-test
   public: true
   serial: true
   plan:

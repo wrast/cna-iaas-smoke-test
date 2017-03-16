@@ -31,6 +31,7 @@ send "\n"
 expect "Hit Enter to shutdown listeners:"
 send "\n"
 
+expect "$prompt"
 send "exit\n"
 
 interact
