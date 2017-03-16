@@ -42,12 +42,13 @@ send "export IAASTESTCONFIGDIR=./\r"
 send "chmod +x ./IaaSSmokeTest_$platform\r"
 send "./IaaSSmokeTest_$platform\r"
 
-expect "something fake"
+# give other host a chance to sync up to this point
+sleep 5
 send "\r"
 
 expect {
   "Hit Enter to shutdown listeners:" {
-    sleep 2
+    sleep 2 # this gives other host a chance to send before we shut down
     send "\r"
     exp_continue
   }
