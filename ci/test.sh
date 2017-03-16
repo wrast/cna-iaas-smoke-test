@@ -47,6 +47,7 @@ send "\r"
 
 expect {
   "Hit Enter to shutdown listeners:" {
+    sleep 2
     send "\r"
     exp_continue
   }
