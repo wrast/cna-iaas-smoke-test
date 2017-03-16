@@ -37,24 +37,23 @@ expect {
   -re $multiprompt
 }
 
-send "cd $remotePath/smoke-test\n"
-send "export IAASTESTCONFIGDIR=./\n"
-send "chmod +x ./IaaSSmokeTest_$platform\n"
-send "./IaaSSmokeTest_$platform\n"
+send "cd $remotePath/smoke-test\r"
+send "export IAASTESTCONFIGDIR=./\r"
+send "chmod +x ./IaaSSmokeTest_$platform\r"
+send "./IaaSSmokeTest_$platform\r"
 
-# wait a couple seconds before telling program to continue
-sleep 5
-send "\n"
+expect "something fake"
+send "\r"
 
 expect {
   "Hit Enter to shutdown listeners:" {
-    send "\n"
+    send "\r"
     exp_continue
   }
 
   -re $multiprompt {
-    send "exit\n"
+    send "exit\r"
   }
 }
 
-#interact
+interact
