@@ -1,0 +1,17 @@
+{
+		"remoteHost":"REMOTE_HOST_ADDRESS",
+		"remoteConnectionDetails": [
+			{
+				"port":"8233",
+				"protocol":"tcp",
+				"description":"remote tcp port"
+			}
+		],
+		"localConnectionDetails": [
+			{
+				"port":"8232",
+				"protocol":"tcp",
+				"description":"local tcp port"
+			}
+		]
+}

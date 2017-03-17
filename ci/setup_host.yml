@@ -22,4 +22,4 @@ params:
   host_platform: host_platform_unknown
 
 run:
-  path: cna-iaas-smoke-test/ci/run_host.sh
+  path: cna-iaas-smoke-test/ci/setup_host.sh

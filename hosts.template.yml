@@ -1,0 +1,16 @@
+
+host1_name: HOSTNAME1
+host1_user: USERNAME1
+host1_password: PASSWORD1
+# path is the directory location on the host where the IaaSSmokeTest application will be executed
+host1_path: .
+# platform should be linux, darwin, or windows
+host1_platform: linux
+
+host2_name: HOSTNAME2
+host2_user: USERNAME2
+host2_password: PASSWORD2
+# path is the directory location on the host where the IaaSSmokeTest application will be executed
+host2_path: .
+# platform should be linux, darwin, or windows
+host2_platform: linux

@@ -1,3 +1,6 @@
+inputs:
+  - name: cna-iaas-smoke-test
+
 jobs:
 - name: iaas-smoke-test
   public: true
@@ -46,7 +49,7 @@ resources:
   source:
     user: ECSTeam
     repository: IaaSSmokeTest
-- name: cna-iaas-smoke-test
-  type: git
-  source:
-    uri: https://github.com/wrast/cna-iaas-smoke-test.git
+# - name: cna-iaas-smoke-test
+#   type: git
+#   source:
+#     uri: https://github.com/wrast/cna-iaas-smoke-test.git
