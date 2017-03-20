@@ -7,7 +7,7 @@ image_resource:
     repository: wrast/ubuntu-expect
 
 inputs:
-  - name: cna-iaas-smoke-test
+  - name: iaas-smoke-test
 
 # provided by pipeline.yml
 params:
@@ -19,4 +19,4 @@ params:
   host_platform: host_platform_unknown
 
 run:
-  path: cna-iaas-smoke-test/ci/test.sh
+  path: iaas-smoke-test/ci/test.sh

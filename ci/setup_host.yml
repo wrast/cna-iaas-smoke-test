@@ -8,7 +8,7 @@ image_resource:
 
 inputs:
   - name: iaas-smoke-test-release
-  - name: cna-iaas-smoke-test
+  - name: iaas-smoke-test
 
 outputs:
   - name: smoke-test
@@ -22,4 +22,4 @@ params:
   host_platform: host_platform_unknown
 
 run:
-  path: cna-iaas-smoke-test/ci/setup_host.sh
+  path: iaas-smoke-test/ci/setup_host.sh
