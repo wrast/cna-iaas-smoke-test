@@ -47,6 +47,13 @@ If the configuration is correct the pipeline should execute successfully. If not
 
 Alternatively, a sample `run.sh` script is included that will set the pipeline, unpause it, start the job, and watch the log output. Review and update this script as appropriate for your environment.
 
+NOTE: The pipeline is not configured to trigger automatically with a change to the config files checked into the github repository. To do this simply add `trigger: true` to the git resource in the `pipeline.yml` plan like so:
+
+```
+- get: iaas-smoke-test
+  trigger: true
+```
+
 # Validate
 
 Even when the pipeline executes successfully and shows green, you should double-check the output of the `run_test1` and `run_test2` tasks to be sure the hosts are able to connect to each other.
