@@ -24,11 +24,11 @@ You might want to set this pipeline up in order to ensure communication between 
     3. Replace the host1 and host2 values in the file with the appropriate values
 5. Add pipeline to Concourse with the fly CLI
     1. Login to concourse server
-      * e.g. `fly -t iaas-smoke-test login -c [concourse server url]`
+        * e.g. `fly -t iaas-smoke-test login -c [concourse server url]`
     2. Add pipeline
-      * e.g. `fly -t iaas-smoke-test set-pipeline -c pipeline.yml -l hosts.yml -p iaas-smoke-test`
+        * e.g. `fly -t iaas-smoke-test set-pipeline -c pipeline.yml -l hosts.yml -p iaas-smoke-test`
     3. Unpause pipeline
-      * e.g. `fly -t iaas-smoke-test unpause-pipeline -p iaas-smoke-test`
+        * e.g. `fly -t iaas-smoke-test unpause-pipeline -p iaas-smoke-test`
 
 # Run
 
