@@ -18,10 +18,17 @@ You might want to set this pipeline up in order to ensure communication between 
 3. Edit the configuration file
     1. Specify the remote host name and TCP/UDP ports to test
     2. Specify the local hosts' TCP/UDP ports used to listen for requests
+    3. One host's config file content should be the "inverse" of the other host's config file
+4. Commit config files to github repo
+    1. `git add config_*.json`
+    2. `git commit`
+    3. `git push`
 4. Create a hosts file.
     1. Use the `hosts.template.yml` file as a template
     2. Rename the file to `hosts.yml`
-    3. Replace the host1 and host2 values in the file with the appropriate values
+    3. For `git_repo` enter forked github repo location from step 1 above
+    3. Replace the `host1_*` and `host2_*` values in the file with the appropriate values
+    4. This file should **not** be added to github since it contains credentials
 5. Add pipeline to Concourse with the fly CLI
     1. Login to concourse server
         * e.g. `fly -t iaas-smoke-test login -c [concourse server url]`
