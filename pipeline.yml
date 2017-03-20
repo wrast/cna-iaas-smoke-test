@@ -7,16 +7,16 @@ jobs:
     - get: iaas-smoke-test-release
     - get: iaas-smoke-test
   - aggregate:
-    - task: run_host1
-      file: iaas-smoke-test/ci/run_host.yml
+    - task: setup_host1
+      file: iaas-smoke-test/ci/setup_host.yml
       params:
         host_name: {{host1_name}}
         host_user: {{host1_user}}
         host_password: {{host1_password}}
         host_path: {{host1_path}}
         host_platform: {{host1_platform}}
-    - task: run_host2
-      file: iaas-smoke-test/ci/run_host.yml
+    - task: setup_host2
+      file: iaas-smoke-test/ci/setup_host.yml
       params:
         host_name: {{host2_name}}
         host_user: {{host2_user}}

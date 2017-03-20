@@ -40,6 +40,6 @@ If the configuration is correct the pipeline should execute successfully. If not
 
 # Validate
 
-Even when the pipeline executes successfully and shows green, you should double-check the output of the `run_test` tasks to be sure the hosts are able to connect to each other.
+Even when the pipeline executes successfully and shows green, you should double-check the output of the `run_test1` and `run_test2` tasks to be sure the hosts are able to connect to each other.
 
 As of the writing of this document, the pipeline itself does not contain any validation of the `IaaSSmokeTest` output to make sure connectivity was successful. Hopefully a future version will add it.
