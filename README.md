@@ -2,7 +2,7 @@
 
 This project is a concourse pipeline based on the [IaaSSmokeTest project](https://github.com/ECSTeam/IaaSSmokeTest). IaaSSmokeTest is an application to test network connectivity between two hosts over a configurable set of TCP/UDP ports.
 
-You might want to set this pipeline up in order to ensure communication between 2 networks where firewall rules have (or haven't) been established.
+You might want to set this pipeline up in order to ensure communication between 2 networks where firewall rules have (or haven't) been established. This could be a precursor to a larger application installation that needs connectivity over various TCP/UDP ports.
 
 # Prerequisites
 
