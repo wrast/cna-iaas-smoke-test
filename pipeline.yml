@@ -49,4 +49,4 @@ resources:
 - name: iaas-smoke-test
   type: git
   source:
-    uri: https://github.com/wrast/iaas-smoke-test.git
+    uri: {{git_repo}}
