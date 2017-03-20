@@ -38,6 +38,8 @@ Click the `+` button to execute the pipeline.
 
 If the configuration is correct the pipeline should execute successfully. If not, you will need to debug the pipeline and/or the configuration files to determine what went wrong.
 
+Alternatively, a sample `run.sh` script is included that will set the pipeline, unpause it, start the job, and watch the log output. Review and update this script as appropriate for your environment.
+
 # Validate
 
 Even when the pipeline executes successfully and shows green, you should double-check the output of the `run_test1` and `run_test2` tasks to be sure the hosts are able to connect to each other.
